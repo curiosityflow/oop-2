@@ -14,37 +14,6 @@ bool operator !=(Card a, Card b){
   return !(a == b);
 }
 
-// Card c1 {Ace, Spades};
-// Card c2 = c1;
-// c1 == c2;
-
-// c2 = c1;
-// c1 == c2;
-// c2 == c1;
-
-// c1 == c1;
-
-// c1 == c2 && c2 == c3
-// c1 == c3;
-
-
-// Ordering...
-
-// Strong trichotemy (law?)
-// a < b
-// b < a
-// a == b --- EQUAL
-//
-// Total order on your values.
-
-
-// Weak trichotemy
-// a < b
-// b < a
-// a is EQUIVALENT to b
-//
-// operator < is called a strict weak order
-
 // Overloads the < operator
 bool operator <(Card a, Card b) {
   if (a.get_suit() < b.get_suit())
@@ -68,22 +37,6 @@ bool operator <=(Card a, Card b) {
 bool operator >=(Card a, Card b) {
   return !(a < b);
 }
-
-
-
-// int sum_of_nats(int n)
-// {
-//   int r = 0;
-//   for (int i = 1; i <= n; ++i)
-//     r += i;
-//   return i;
-// }
-
-// int sum_of_nats(int n)
-// {
-//   return (n * (n + 1)) / 2;
-// }
-
 
 // Overloads the << operator for each rank
 std::ostream& operator <<(std::ostream& os, Rank r) {

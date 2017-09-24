@@ -1,5 +1,6 @@
 // B. Maritza Trevizo Nava
 
+#pragma once
 #include <utility>
 #include <iosfwd>
 
@@ -59,18 +60,6 @@ public:
   Rank get_rank() const { return rank; }
   Suit get_suit() const { return suit; }
 
-
-  // // Mutator functions.
-  // // Modifier functions.
-  //
-  // Don't provide mutators if they're just assignment.
-  // Prefer to make things public (unless your boss says
-  // otherwise).
-  //
-  // void set_rank(Rank r) { rank = r; }
-  // void set_suit(Suit s) { suit = s; }
-
-
 private:
   Rank rank;
   Suit suit;
@@ -86,15 +75,7 @@ bool operator>(Card a, Card b);
 bool operator<=(Card a, Card b);
 bool operator>=(Card a, Card b);
 
+// Outputting
 std::ostream& operator<<(std::ostream& os, Card c);
 std::ostream& operator<<(std::ostream& os, Rank r);
 std::ostream& operator<<(std::ostream& os, Suit s);
-
-
-// /// A member function is kind of like a normal function.
-// /// It is (roughly) equivalent to this:
-// ///
-// /// NOTE: Not valid C++ (because this is reserved word).
-// Rank get_rank(const Card* this) {
-//   return this->rank;
-// }
