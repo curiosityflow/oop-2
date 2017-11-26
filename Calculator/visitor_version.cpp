@@ -139,43 +139,43 @@ struct print_visitor:visitor {
     std::cout << e->val;
   }
   void visit(add *e) override {
-    cout << '(';
+    std::cout << '(';
     print_visitor v1;
     e->e1.accept(v1);
-    cout << ") + (";
+    std::cout << ") + (";
     print_visitor v2;
     e->e2.accept(v2);
-    cout << ')';
+    std::cout << ')';
   }
 
   void visit(subtract *e) override {
-    cout << '(';
+    std::cout << '(';
     print_visitor v1;
     e->e1.accept(v1);
-    cout << ") - (";
+    std::cout << ") - (";
     print_visitor v2;
     e->e2.accept(v2);
-    cout << ')';
+    std::cout << ')';
   }
 
   void visit(multiply *e) override {
-    cout << '(';
+    std::cout << '(';
     print_visitor v1;
     e->e1.accept(v1);
-    cout << ") * (";
+    std::cout << ") * (";
     print_visitor v2;
     e->e2.accept(v2);
-    cout << ')';
+    std::cout << ')';
   }
 
   void visit(divide *e) override {
-    cout << '(';
+    std::cout << '(';
     print_visitor v1;
     e->e1.accept(v1);
-    cout << ") / (";
+    std::cout << ") / (";
     print_visitor v2;
     e->e2.accept(v2);
-    cout << ')';
+    std::cout << ')';
   }
 
 };

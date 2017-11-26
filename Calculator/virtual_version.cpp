@@ -12,7 +12,7 @@ struct Int:Expression {
   int val;
 
   void print() override{
-    cout << v;
+    std::cout << v;
   }
 
   Int eval() override {
@@ -48,11 +48,11 @@ struct add:Binary {
   }
 
   void print() override {
-    cout << '(';
+    std::cout << '(';
     e1.print();
-    cout << ") + (";
+    std::cout << ") + (";
     e2.print();
-    cout << ')';
+    std::cout << ')';
 
   }
 };
@@ -71,11 +71,11 @@ struct subtract:Binary {
   }
 
   void print() override {
-    cout << '(';
+    std::cout << '(';
     e1.print();
-    cout << ") - (";
+    std::cout << ") - (";
     e2.print();
-    cout << ')';
+    std::cout << ')';
 
   }
 };
@@ -94,11 +94,11 @@ struct multiply:Binary {
   }
 
   void print() override {
-    cout << '(';
+    std::cout << '(';
     e1.print();
-    cout << ") * (";
+    std::cout << ") * (";
     e2.print();
-    cout << ')';
+    std::cout << ')';
 
   }
 };
@@ -116,11 +116,11 @@ struct divide:Binary {
   }
 
   void print() override {
-    cout << '(';
+    std::cout << '(';
     e1.print();
-    cout << ") / (";
+    std::cout << ") / (";
     e2.print();
-    cout << ')';
+    std::cout << ')';
 
   }
 };
